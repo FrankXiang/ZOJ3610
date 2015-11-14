@@ -1,15 +1,25 @@
-//
-//  main.c
-//  ZOJ3610
-//
-//  Created by frank on 15-11-14.
-//  Copyright (c) 2015年 frank. All rights reserved.
-//
+
 
 #include <stdio.h>
+#include<stdlib.h>
+#include<string.h>
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    printf("Hello, World!\n");
+    int T;
+    scanf("%d",&T);
+    getchar();
+    while (T-->0) {
+        char buf[70];
+        gets(buf);
+        char *buf_add[3];
+        char *s = strtok(buf," ");
+        int i = 0;
+        while(s){
+            buf_add[i] = s;
+            s = strtok(NULL," ");
+            i++;
+        }
+        printf("%s will survive\n",buf_add[1]);
+    }
     return 0;
 }
